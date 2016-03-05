@@ -1,13 +1,201 @@
-<% provide(:title, 'Home') %>
-<div class="center jumbotron">
-  <h1>Welcome to the Dog World</h1>
-
-  <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<!--bootstarp-css-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--/bootstarp-css -->
+<!--css-->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--/css-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Petcare Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/hover.css" rel="stylesheet" media="all">
+<!--fonts-->
+<link href='http://fonts.useso.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+<!--/fonts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/modernizr.custom.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      $("#slider2").responsiveSlides({
+        auto: true,
+        pager: true,
+        speed: 300,
+        namespace: "callbacks",
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="header-banner">
+   <div class="slider">
+	    <ul class="rslides" id="slider2">
+	      <li><a href="#"><img src="assets/4.jpg" class="img-responsive" alt=""/></a></li>
+	      <li><a href="#"><img src="assets/2.jpg" class="img-responsive" alt=""/></a></li>
+	      <li><a href="#"><img src="assets/3.jpg" class="img-responsive" alt=""/></a></li>
+	    </ul>
+    </div>
 </div>
+<!--doctor-self-->
+<div class="doctor-self">
+	<div class="container">
+		<div class="doctor-self-info">
+			<h3>WHAT WOULD OUR DEAN SAYS</h3>
+			<div class="doctor-self-info-bottom">
+				<div class="col-md-4 doctor-self-left">
+					<img src="assets/5.jpg" class="img-responsive" alt=""/>
+					<h4>DR.JIMMY</h4>
+					<h5>lorem lipsum doolr in groem horntim</h5>
+				</div>
+				<div class="col-md-8 doctor-self-right">
+					<p>"Lorem Ipsum is simply dummy text of the printing and typesetting i
+						ndustry. Lorem Ipsum has been the industry's standard dummy text 
+						ever since the 1500s<br /><br /> reproduced below for those interested. Sections 1.10.32
+						  and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
+						   are also reproduced in their exact original form, accompanied
+						    by English versions from the 1914 translation by H. Rackham
+						Lorem Ipsum is simply dummy text of the printing and typesetting i
+						ndustry. Lorem Ipsum has been the industry's standard dummy text 
+						ever since the 1500s"</p>
+				</div>
+				<div class="clearfix"> </div>
+				</div>
+		</div>
+	</div>
+</div>
+<!--/doctor-self-->
+<!--dogs-food-->
+<div class="dogs-food">
+	<div class="container">
+		<div class="dogs-food-top-info">
+		<div class="dogs-food-top">
+			<div class="col-md-4 dogs-food-info">
+				<img src="assets/dg-1.png">
+				<h4>CARE</h4>
+				<p>when an unknown printer took a galley of
+					 type and scrambled it to make a type speci
+					men book</p>
+					 <a class="dogs-top-food" href="#">More</a>
+			</div>
+			<div class="col-md-4 dogs-food-info">
+				<img src="assets/dg-2.png">
+				<h4>CARE-+</h4>
+				<p>when an unknown printer took a galley of
+					 type and scrambled it to make a type speci
+					men book</p>
+					<a class="dogs-top-food" href="#">More</a>
+			</div>
+			<div class="col-md-4 dogs-food-info">
+				<img src="assets/dg-3.png">
+				<h4>TRAVEL</h4>
+				<p>when an unknown printer took a galley of
+					 type and scrambled it to make a type speci
+					men book</p>
+					<a class="dogs-top-food" href="#">More</a>
+			</div>
+			<div class="col-md-4 dogs-food-info">
+				<img src="assets/dg-4.png">
+				<h4>FRIEND-SHIP</h4>
+				<p>when an unknown printer took a galley of
+					 type and scrambled it to make a type speci
+					men book</p>
+					<a class="dogs-top-food" href="#">More</a>
+			</div>
+				<div class="col-md-4 dogs-food-info">
+					<img src="assets/dg-5.png">
+					<h4>DOG-HOME</h4>
+					<p>when an unknown printer took a galley of
+						 type and scrambled it to make a type speci
+						men book</p>
+						<a class="dogs-top-food" href="#">More</a>
+				</div>
+				<div class="col-md-4 dogs-food-info">
+					<img src="assets/dg-6.png">
+					<h4>DOG-FOOD</h4>
+					<p>when an unknown printer took a galley of
+						 type and scrambled it to make a type speci
+						men book</p>
+						<a class="dogs-top-food" href="#">More</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--/dogs-food-->
+<!--daily-updates-->
+<div class="daily-updates">
+	<div class="container">
+		<div class="daily-updates-info">
+		<h4>SUBSCRIBE FOR DAILY UPDATES</h4>
+		<form>
+			
+					 <input type="text" class="text" value="EMAIL" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EMAIL';}">
+					 <input type="submit"value="SUBMIT">
+		 	</form>
+		 	<p>FOR HELP<span><a href="mailto:example@mail.com">pets-care@mail.com</a></span></p>
+		 	</div>
+	</div>
+</div>
+<!--/daily-updates-->
+<!--support-->
+<div class="support">
+	<div class="container">
+		<div class="support-info">
+			<h4>OUR TEAM FOR SUPPORT</h4>
+			<div class="support-info-left">
+			<div class="col-md-10 support-info-left-bottom">
+				<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+					 the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of ty
+						pe and scrambled</p>
+			</div>
+			<div class="col-md-2 support-info-left-top">
+				<img src="assets/support.png" class="img-responsive" alt=""/>
+			</div>	
+			<div class="clearfix"> </div>
+			</div>
+			<div class="support-info-right">
+			<div class="col-md-2 support-info-right-bottom">
+				<img src="assets/support.png" class="img-responsive" alt=""/>
+			</div>	
+			<div class="col-md-10 support-info-right-top">
+				<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+					 the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of ty
+						pe and scrambled</p>
+			</div>
+			<div class="clearfix"> </div>
+			</div>
+						<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!--/support-->
+<!--contact-->
+<div class="contact">
+	<div class="container">
+		<div class="contact-info">
+			<h4>CONTACT-US</h4>
+			<p>Typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
+		</div>
+		<form>
+						 <input type="text" class="text" value="NAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'NAME';}">
+						 <input type="text" class="text" value="EMAIL" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EMAIL';}">
+						 <textarea onfocus="if(this.value == 'MESSAGE') this.value='';" onblur="if(this.value == '') this.value='MESSAGE';" >MESSAGE</textarea>	
+						 <div class="clearfix"> </div>
+						 <input type="submit"value="SUBMIT">
+					</form>
 
+	</div>
+</div>
+<!--/contact-->
+
+</body>
+</html>

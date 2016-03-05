@@ -4,8 +4,7 @@
     <div class="container">
     <div class="logo">
         <img src="assets/logomin.png"  />
-    </div>
-               
+    </div>              
     </div>
   </div>
 </div>
@@ -15,13 +14,8 @@
                 <span class="menu-info"> </span>
                 <ul class="cl-effect-21">
                   <li><%= link_to "HOME", root_path %></li>
-                  <li><%= link_to "ABOUT", about_path %></li>
-
-                  
-                
-
+                  <li><%= link_to "ABOUT", about_path %></li>                  
                   <li><%= link_to "CONTACT", contact_path %></li>
-                  <li><a href="contact.html"  class="active">CONTACT</a></li>
                   <% if logged_in? %>
                     <li><%= link_to "USERS", users_path %></li>
                     <li><%= link_to "LOG OUT", logout_path, method: "delete" %></li>
