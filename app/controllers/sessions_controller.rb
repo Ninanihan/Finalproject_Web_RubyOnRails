@@ -10,6 +10,7 @@ def create
           # Log the user in and redirect to their profile page.
         else
           flash[:danger] = 'Invalid email/password combination' # Not quite right!
+
           render 'new'
         end
   end

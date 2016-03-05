@@ -31,7 +31,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         remember @user
-        flash[:success] = "Welcome to the Dog World!"
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -46,7 +45,6 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        flash[:success] = "Profile updated"
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -60,7 +58,6 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
-    flash[:success] = "User deleted"
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
