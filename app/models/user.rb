@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
     validates :email, presence: true, 
                         format: { with: VALID_EMAIL_REGEX },
                         uniqueness: { case_sensitive: false }
-    VALID_PASSWORD_REGEX = /[A-Z]+[a-z]+[0-9]/
-    validates :password, presence: true, length: { minimum: 8 },
-                         format: { with: VALID_PASSWORD_REGEX },
+    
+    validates :password, presence: true, length: { minimum: 6 },
+                         
                          allow_nil: true
     validates :password_confirmation, presence: true
     has_secure_password
