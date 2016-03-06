@@ -45,7 +45,7 @@ h1,h2,h3,h4,h5,h6,p,span{
 	border: none;
 	outline: none;
 	cursor: pointer;
-	background: url(../images/top-s.png)no-repeat 0px 0px;
+	background: url(../assets/top-s.png)no-repeat 0px 0px;
 	position: absolute;
 	right: 0px;
 	bottom: 7px;
@@ -272,7 +272,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	padding-top: 5px;
 }
 .dogs-food{
-	background: url(../images/dogsfood.jpg)no-repeat 0px 0px;
+	background: url(../assets/dogsfood.jpg)no-repeat 0px 0px;
 	min-height:500px;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -1266,7 +1266,7 @@ margin: 0 0 2em;
 }
 @media (max-width: 640px){
 	span.menu-info:before {
-		content: url("../images/menu.png") no-repeat;
+		content: url("../assets/menu.png") no-repeat;
 		cursor: pointer;
 	}
 	.header {
