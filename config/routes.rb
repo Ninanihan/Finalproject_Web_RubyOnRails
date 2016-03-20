@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :breeders
+  resources :products
   resources :users
   root 'static_pages#home'
   

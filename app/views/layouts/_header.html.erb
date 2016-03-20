@@ -3,7 +3,7 @@
   <div class="header-info">
     <div class="container">
     <div class="logo">
-        <img src="assets/logomin.png"  />
+        <img src="assets/logo.png"  />
     </div>              
     </div>
   </div>
@@ -17,7 +17,8 @@
                   <li><%= link_to "ABOUT", about_path %></li>                  
                   <li><%= link_to "CONTACT", contact_path %></li>
                   <% if logged_in? %>
-                    <li><%= link_to "USERS", users_path %></li>
+                    <li><%= link_to "BREEDS", breeders_path %></li>
+                    <li><%= link_to "SALES", products_path %></li>
                     <li><%= link_to "LOG OUT", logout_path, method: "delete" %></li>
                   <% else %>
                     <li><%= link_to "LOG IN", login_path %></li>

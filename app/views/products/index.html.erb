@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+<br>
+<h1>Dogs for Saling  <a href="http://localhost:3000/products/new" class="btn btn-dark btn-lg">
+  Add Sale  </a>  </h1>
+<p>(1)You can add dogs for saling.</p>
+<p>(2)You can buy a dog what you want.</p>
+
+<% @products.each_slice(3) do |products| %>
+  <div class="row">
+    <% products.each do |product| %>
+      <div class="col-md-4">
+        <div class="recipe">
+          <div class="image_wrapper">
+            <%= link_to product do %>
+              <%= image_tag product.image.url(:medium) %>
+            <% end %>
+          </div>
+          <h2><%= link_to product.breeds, product %></h2>
+          <h2>Seller: <%= link_to product.user_email, product.user %> </h2>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= link_to 'New Product', new_product_path %>

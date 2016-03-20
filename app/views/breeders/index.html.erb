@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+<br>
+
+<h1>Dogs for Breeding  <a href="http://localhost:3000/breeders/new" class="btn btn-dark btn-lg">
+  Add Breeds  </a> </h1>
+<p>(1)You can add dogs for breeding.</p>
+<p>(2)You can search a dog for breeding which matches your dog.</p>
+
+<% @breeders.each_slice(3) do |breeders| %>
+  <div class="row">
+    <% breeders.each do |breeder| %>
+      <div class="col-md-4">
+        <div class="recipe">
+          <div class="image_wrapper">
+            <%= link_to breeder do %>
+              <%= image_tag breeder.image.url(:medium) %>
+            <% end %>
+          </div>
+          <h2><%= link_to breeder.name, breeder %></h2>
+          <h2>Owner: <%= link_to breeder.user_email, breeder.user %> </h2>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+
+<%= link_to 'New Breeder', new_breeder_path %>

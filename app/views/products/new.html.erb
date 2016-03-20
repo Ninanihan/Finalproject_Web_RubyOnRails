@@ -1,0 +1,53 @@
+<h1>New Product</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @product, html: { multipart: true } do |f| %>
+    
+      <%= f.label :image %>
+      <%= f.file_field :image, class: 'form-control' %>
+
+      
+
+      <%= f.label :age %>
+      <%= f.select(:age,@option = options_for_select([[''],['1 month'],['2 months'],['3 months'],['4 months'],['5 months'],['6 months'],['6 months - 1 year']],@product.age)) %>
+
+      <%= f.label :gender %>
+      <%= f.select(:gender,@option = options_for_select([['',''],['Male','0'],['Female','1']],@product.gender)) %>
+
+      <%= f.label :breeds %>
+      <%= f.select(:breeds,@option = options_for_select([[''],['Labrador'],['German Shepherd'],['Beagle'],['Golden Retriever'],['Yorkshire Terrier'],['Bulldog'],['Box'],['Poodle'],['Others']],@product.breeds)) %>
+
+      <%= f.label :city %>
+      <%= f.select(:city,@option = options_for_select([[''],['Carlow'],['Cavan'],['Clare'],['Cork'],['Donegal'],['Dublin'],['Kerry'],['Kildare'],['Kilkenny'],['Laois'],['Leitrim'],['Limerick'],['Longford'],['Louth'],['Mayo'],['Meath'],['Monaghan'],['Offaly'],['Roscommon'],['Sligo'],['Tipperary'],['Waterford'],['Westmeath'],['Wexford'],['Wicklow']],@product.city)) %>
+
+      <%= f.label :price %>
+       <%= f.text_field :price, placeholder: "€", class: 'form-control' %>
+
+  
+    <%= f.label :father %>
+    <%= f.text_field :father, class: 'form-control' %>
+
+    <%= f.label :mother %>
+    <%= f.text_field :mother, class: 'form-control' %>
+
+    <%= f.label :imageurl %><br>
+    <%= f.text_field :imageurl, class: 'form-control' %>
+  
+    <%= f.label :injectionurl %>
+    <%= f.text_field :injectionurl, class: 'form-control' %>
+ 
+    <%= f.label :health %>
+    <%= f.number_field :health, class: 'form-control' %>
+ 
+
+      
+      <%= f.hidden_field(:user_id, :value=>current_user.id)  %>
+      <%= f.hidden_field(:user_email, :value=>current_user.email)  %>
+
+
+      <%= f.submit "Add an product", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<%= link_to 'Back', products_path %>

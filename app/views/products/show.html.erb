@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<div class="row">
+  <aside class="col-md-6">
+    <section >
+    
+      <%= image_tag @product.image.url(:medium) %>
+    
+    </section>
+  </aside>
+
+  <div>
+
+<h2>
+  <strong>Breeds:</strong>
+  <%= @product.breeds %>
+</h2>
+
+
+
+<p>
+  <strong>Age:</strong>
+  <%= @product.age %>
+</p>
+
+
+<p>
+  <strong>City:</strong>
+  <%= @product.city %>
+</p>
+
+<p>
+  <strong>Father:</strong>
+  <%= @product.father %>
+</p>
+
+<p>
+  <strong>Mother:</strong>
+  <%= @product.mother %>
+</p>
+
+
+
+<p>
+  <strong>Health:</strong>
+  <%= @product.health %>
+</p>
+
+<p>
+  <strong>Price: €</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @product.gender %>
+</p>
+
+
+
+<p>
+  <strong>Seller:</strong>
+  <%= @product.user_email %>
+</p>
+</div>
+</div>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

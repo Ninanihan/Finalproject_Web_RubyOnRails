@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<div class="row">
+  <aside class="col-md-7">
+    <section >
+    
+      <%= image_tag @breeder.image.url(:large) %>
+    
+    </section>
+  </aside>
+<div>
+<h2>
+  <strong>Name:</strong>
+  <%= @breeder.name %>
+</h2>
+
+<p>
+  <strong>Age:</strong>
+  <%= @breeder.age %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @breeder.gender==0?"Male":"Female" %>
+</p>
+
+<p>
+  <strong>Breeds:</strong>
+  <%= @breeder.breeds %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @breeder.city %>
+</p>
+
+<p>
+  <strong>Father:</strong>
+  <%= @breeder.father %>
+</p>
+
+<p>
+  <strong>Mother:</strong>
+  <%= @breeder.mother %>
+</p>
+
+<p>
+  <strong>Healthy state:</strong>
+  <%= @breeder.health %>
+</p>
+
+
+<p>
+  <strong>Owner email:</strong>
+  <%= @breeder.user_email %>
+</p>
+</div>
+</div>
+
+<%= link_to 'Edit', edit_breeder_path(@breeder) %> |
+<%= link_to 'Back', breeders_path %>

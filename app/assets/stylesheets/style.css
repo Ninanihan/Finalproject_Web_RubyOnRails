@@ -10,10 +10,11 @@ h1,h2,h3,h4,h5,h6,p,span{
 /*--header--*/
 .header {
 	background: #3598DB;
-	min-height: 180px;
+	height: 150px;
 }
 .logo{
-	float: left;
+	
+	padding-bottom: 3em;
 }
 
 .header-info {
@@ -113,7 +114,7 @@ h1,h2,h3,h4,h5,h6,p,span{
 	color: #000;
 	letter-spacing: 1px;
 	font-weight: 400;
-	font-size: 0.85em;
+	font-size: 1.5em;
 }
 .menu a:hover,
 .menu a:focus {
@@ -138,6 +139,7 @@ text-decoration: none;
 	text-align: center;
 	width: 85%;
 	margin: 0 auto;
+	width:1000px;
 }
 .menu {
 	background: #fff;
