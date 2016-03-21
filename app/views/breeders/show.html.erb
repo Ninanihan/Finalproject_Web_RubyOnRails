@@ -47,7 +47,8 @@
 
 <p>
   <strong>Healthy state:</strong>
-  <%= @breeder.health %>
+  <div class="star-rating" data-score=<%= @breeder.health %> ></div>
+  
 </p>
 
 
@@ -60,3 +61,13 @@
 
 <%= link_to 'Edit', edit_breeder_path(@breeder) %> |
 <%= link_to 'Back', breeders_path %>
+
+<script>
+    $('.star-rating').raty({
+      path: '/assets/',
+      readOnly: true,
+      score: function() {
+            return $(this).attr('data-score');
+    }
+  });
+</script>

@@ -43,8 +43,8 @@
 
 
 <p>
-  <strong>Health:</strong>
-  <%= @product.health %>
+  <strong>Healthy state:</strong>
+  <div class="star-rating" data-score=<%= @product.health %> ></div>
 </p>
 
 <p>
@@ -68,3 +68,13 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+<script>
+    $('.star-rating').raty({
+      path: '/assets/',
+      readOnly: true,
+      score: function() {
+            return $(this).attr('data-score');
+    }
+  });
+</script>

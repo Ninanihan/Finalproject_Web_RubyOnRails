@@ -1,0 +1,24 @@
+<br>
+<br>
+<h1>Search products results</h1>
+<table class="table table-striped">
+  <thead>
+  
+  </thead>
+
+  <tbody>
+    <% @product.each do |product| %>
+      <br>
+  <div class="div">
+    <h1><%= link_to product.breeds, product %></h1>
+    
+    <h2>Gender: <%= product.gender==0?"Male":"Female" %></h2>
+    <h2>Price: <%= product.price %></h2>
+    
+    
+
+  </div>
+    <% end %> 
+  </tbody>
+</table>
+<%= link_to "Back", products_path %>

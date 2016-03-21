@@ -7,6 +7,13 @@
 <p>(1)You can add dogs for saling.</p>
 <p>(2)You can buy a dog what you want.</p>
 
+<%= form_tag searchesed_path, method: :get do %>
+    <%= text_field_tag :searches, params[:searches], placeholder: "input what you want" %>
+    <center>
+       <% end %>
+  <input class="btn btn-large btn-primary" name="commit" type="submit" value="Search">
+    </center>
+
 <% @products.each_slice(3) do |products| %>
   <div class="row">
     <% products.each do |product| %>

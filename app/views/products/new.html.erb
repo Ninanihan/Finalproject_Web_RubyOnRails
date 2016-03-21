@@ -31,14 +31,16 @@
     <%= f.label :mother %>
     <%= f.text_field :mother, class: 'form-control' %>
 
+    <div class="field">
+        <%= f.label :health %>
+        <div id="star-rating"></div>
+    </div>
+
     <%= f.label :imageurl %><br>
     <%= f.text_field :imageurl, class: 'form-control' %>
   
     <%= f.label :injectionurl %>
     <%= f.text_field :injectionurl, class: 'form-control' %>
- 
-    <%= f.label :health %>
-    <%= f.number_field :health, class: 'form-control' %>
  
 
       
@@ -51,3 +53,10 @@
   </div>
 </div>
 <%= link_to 'Back', products_path %>
+
+<script>
+  $('#star-rating').raty({
+    path: '/assets/',
+    scoreName: 'product[health]'
+  });
+</script>

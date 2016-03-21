@@ -1,0 +1,25 @@
+<br>
+<br>
+<h1>Search breeders results</h1>
+<table class="table table-striped">
+  <thead>
+  
+  </thead>
+
+  <tbody>
+    <% @breeder.each do |breeder| %>
+      <br>
+  <div class="div">
+    <h1><%= link_to breeder.name, breeder %></h1>
+    
+    <h2>Age: <%= breeder.age %></h2>
+    <h2>Gender: <%= breeder.gender==0?"Male":"Female" %></h2>
+    <h2>Breeds: <%= breeder.breeds %></h2>
+    
+    
+
+  </div>
+    <% end %> 
+  </tbody>
+</table>
+<%= link_to "Back", breeders_path %>
