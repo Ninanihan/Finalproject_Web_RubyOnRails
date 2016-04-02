@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
 
-  resources :breeders
+  resources :breeders do
+    resources :comments
+  end
+
   resources :products
   resources :users
   root 'static_pages#home'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160320152554) do
+ActiveRecord::Schema.define(version: 20160402204150) do
 
   create_table "breeders", force: :cascade do |t|
     t.string   "name"
@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(version: 20160320152554) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "breeder_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["breeder_id"], name: "index_comments_on_breeder_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "products", force: :cascade do |t|
     t.string   "imageurl"

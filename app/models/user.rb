@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   has_many :breeders
   has_many :products
+  has_many :comments
   
 	before_save { self.email = email.downcase }
 	validates :name, presence: true, length: { in: 5..30 }
@@ -18,7 +19,7 @@ class User < ActiveRecord::Base
    
     validates :password_confirmation, presence: true
     has_secure_password
-
+    
    
 
     # Returns the hash digest of a string.
