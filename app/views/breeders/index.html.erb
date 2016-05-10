@@ -3,17 +3,15 @@
 <br>
 <br>
 
-<h1>Dogs for Breeding  <a href="http://localhost:3000/breeders/new" class="btn btn-dark btn-lg">
-  Add Breeds  </a> </h1>
-<p>(1)You can add dogs for breeding.</p>
+<h1>Dogs for Breeding </h1>
+<p>(1)You can add dogs for breeding. <a href="http://localhost:3000/breeders/new" class="btn btn-dark">
+  Add Breeds  </a></p>
 <p>(2)You can search a dog for breeding which matches your dog.</p>
-
 <%= form_tag searched_path, method: :get do %>
-    <%= text_field_tag :search, params[:search], placeholder: "input what you want" %>
-    <center>
-       <% end %>
-  <input class="btn btn-large btn-primary" name="commit" type="submit" value="Search">
-    </center>
+    Search: <%= text_field_tag :search, params[:search], placeholder: "input breeds or city" %>&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn btn-dark" name="commit" type="submit" value="Search">
+<% end %>
+  
+    
 
 <% @breeders.each_slice(3) do |breeders| %>
   <div class="row">

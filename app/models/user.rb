@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :breeders
   has_many :products
   has_many :comments
+  has_many :orders
   
 	before_save { self.email = email.downcase }
 	validates :name, presence: true, length: { in: 5..30 }

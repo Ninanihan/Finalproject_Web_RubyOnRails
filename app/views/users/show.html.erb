@@ -12,9 +12,18 @@
             <%= gravatar_for @user %>
             <%= @user.name %>
           </h1>
+          <h1>
+            <%= link_to "LOG OUT", logout_path, method: "delete" %>
+
+          </h1>
         </section>
       </aside>
-    </div>
+    <div>
 
+    <p><%= @user.orders.count %> Orders</p>
+    <%= render @user.orders %>
+    </div>
+  </div>
+    
 
 <%= link_to 'Back', users_path %>

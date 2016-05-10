@@ -5,7 +5,7 @@
   <aside class="col-md-7">
     <section >
     
-      <%= image_tag @breeder.image.url(:large) %>
+      <%= image_tag @breeder.image.url(:medium) %>
     
     </section>
   </aside>
@@ -46,11 +46,15 @@
 </p>
 
 <p>
-  <strong>Healthy state:</strong>
+  <strong>Health status:</strong>
   <div class="star-rating" data-score=<%= @breeder.health %> ></div>
   
 </p>
 
+<p>
+  <strong>Injection certificate:</strong>
+  <a href="http://cdn.lookanimals.com/pictures/dan.drydog.com/fanniemae/fannie-mae-vaccination-cert-2011.jpg">View</a>
+</p>
 
 <p>
   <strong>Owner email:</strong>

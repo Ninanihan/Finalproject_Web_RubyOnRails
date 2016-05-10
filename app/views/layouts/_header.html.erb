@@ -19,7 +19,8 @@
                   <% if logged_in? %>
                     <li><%= link_to "BREEDS", breeders_path %></li>
                     <li><%= link_to "SALES", products_path %></li>
-                    <li><%= link_to "LOG OUT", logout_path, method: "delete" %></li>
+                    <li><%= link_to "MY ACCOUNT", current_user %></li>
+                    
                   <% else %>
                     <li><%= link_to "LOG IN", login_path %></li>
                   <% end %>

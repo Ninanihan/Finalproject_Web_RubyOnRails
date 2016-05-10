@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
   
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :breeders do
     resources :comments
   end
 
-  resources :products
+  resources :products do
+    resources :orders
+  end
+
+  
+  
   resources :users
   root 'static_pages#home'
   

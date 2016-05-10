@@ -1,0 +1,15 @@
+<div>  
+    
+    <div>
+      
+      <p><strong><%= link_to order.product.breeds, order.product %></strong></p>
+      <p>Name:<%= order.name %></p>
+      <p>Address:<%= order.address %></p>
+      <p>Phone number:<%= order.phone_number %></p>
+      <p>Price: €<%= order.product.price %></p>
+
+      <p><%= time_ago_in_words(order.created_at) %> ago.</p>
+
+    </div>
+    
+</div>

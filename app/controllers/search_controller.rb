@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 def search 
         
-          @breeder = Breeder.find_by_sql(["select * from breeders where breeds like? OR name LIKE?OR city LIKE?",
+          @breeder = Breeder.find_by_sql(["select * from breeders where breeds like? OR gender LIKE?OR city LIKE?",
             "%#{params[:search]}%","%#{params[:search]}%","%#{params[:search]}%"])
         if @breeder.length ==0
           if params[:search].empty? == false && params[:search].blank? == true

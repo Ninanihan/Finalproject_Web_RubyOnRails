@@ -2,17 +2,17 @@
 
 <br>
 <br>
-<h1>Dogs for Saling  <a href="http://localhost:3000/products/new" class="btn btn-dark btn-lg">
-  Add Sale  </a>  </h1>
-<p>(1)You can add dogs for saling.</p>
-<p>(2)You can buy a dog what you want.</p>
+<h1>Dogs for Sale</h1>
+<p>(1)You can add dogs for sale.  <a href="http://localhost:3000/products/new" class="btn btn-dark btn-lg">
+  Add Sale  </a></p>
+<p>(2)You can buy a dog that you want.</p>
 
 <%= form_tag searchesed_path, method: :get do %>
-    <%= text_field_tag :searches, params[:searches], placeholder: "input what you want" %>
-    <center>
+    Search: <%= text_field_tag :searches, params[:searches], placeholder: "input breeds or city" %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <input class="btn btn-dark" name="commit" type="submit" value="Search">
+
        <% end %>
-  <input class="btn btn-large btn-primary" name="commit" type="submit" value="Search">
-    </center>
+    
 
 <% @products.each_slice(3) do |products| %>
   <div class="row">
